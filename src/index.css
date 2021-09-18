@@ -1,0 +1,90 @@
+
+
+.calculator {
+  max-height: 800px;
+  background-color: gray;
+  width: 450px;
+  min-width: 33%;
+  margin: auto;
+  padding: 18px 10px 10px 10px;
+  border-radius: 8px;
+  transform: scale(0.8);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  grid-template-areas:
+    'display display display display'
+    'AC C divide multiply'
+    'seven eight nine minus'
+    'four five six plus'
+    'one two three equals'
+    'zero zero decimal equals';
+}
+
+.calculator-button:hover {
+  opacity: 0.5;
+}
+
+.display {
+  grid-area: display;
+  width: 92%;
+  background-color: white;
+  text-align: right;
+  margin: auto;
+  border-radius: 3px;
+  padding: 4px 8px 6px 9px;
+  font-family: 'Orbitron', sans-serif;
+  word-wrap: break-word;
+  margin-bottom: 1rem;
+}
+input {
+  color: black;
+  border: none;
+  min-height: 1.5em;
+  text-align: right;
+  font-size: 26px !important;
+}
+.total {
+  color: #0076fc;
+  font-size: 2.2em;
+  min-height: 1.5em;
+  width: 100%;
+}
+
+.equals {
+  grid-area: equals;
+}
+.zero {
+  grid-area: zero;
+}
+
+.btn-default {
+  box-shadow: 0px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.btn-info {
+  box-shadow: 0px 4px 0px rgba(7, 0, 118, 0.3);
+}
+
+.btn-danger {
+  box-shadow: 0px 4px 0px rgba(118, 24, 24, 0.5);
+}
+
+#bootstrap-overrides .btn {
+  font-weight: 600;
+  font-size: 30px;
+  margin: 2% 2%;
+  padding: 30px;
+  border-radius: 1rem;
+}
+
+#bootstrap-overrides .equals {
+  padding-top: 60px;
+  font-size: 40px;
+}
+#bootstrap-overrides .btn-default {
+  background-color: #9ea4b2;
+}
